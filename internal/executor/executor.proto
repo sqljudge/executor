@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package executor;
+
+service Executor {
+  rpc Execute(Request) returns (Response) {}
+}
+
+message Request {
+  string query = 1;
+}
+
+message Response {
+  string rows = 1;
+}
